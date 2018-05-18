@@ -1,6 +1,7 @@
 
-<h1>Create a cocktail</h1>
+
 <div class="container">
+<h1>Create a cocktail</h1>
 <%= simple_form_for @cocktail, wrapper_mappings: {photo: :vertical_file_input}  do |f| %>
   <%= f.input :name %>
   <%= f.input :photo %>
