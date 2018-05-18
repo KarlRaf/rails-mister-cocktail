@@ -8,3 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
+console.log("Hello from app/javascript/packs/application.js!");
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
