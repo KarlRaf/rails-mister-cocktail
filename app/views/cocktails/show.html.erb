@@ -1,10 +1,16 @@
-<h1>Cocktails#show</h1>
-<h2> <%= @cocktail.name %> </h2>
-<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-<h1> <%= link_to "add a dose", new_cocktail_dose_path(@cocktail) %> </h1>
-<h2><% @cocktail.doses.each do |dose| %></h2>
-  <h2><%= dose.description %></h2>
-  <h2><%= dose.ingredient[:name] %> </h2>
-  <%= link_to "delete dose", cocktail_dose_path(@cocktail, dose), method: :delete  %>
-<% end %>
-<%= link_to "return to home page", cocktails_path %>
+
+
+<div class="banner-show" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>');">
+  <div class="banner-content">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
+<div class="container">
+  <h2> <%= @cocktail.name %> </h2>
+  <p> <%= link_to "Pimp it", new_cocktail_dose_path(@cocktail) %> </p>
+   <% @cocktail.doses.each do |dose| %>
+    <h4>Made with love with <%= dose.description %> of <%= dose.ingredient[:name] %></h4>
+    <%= link_to "Delete dose", cocktail_dose_path(@cocktail, dose), method: :delete  %>
+  <% end %>
+  <p> <%= link_to "Return to earth", cocktails_path %> </p>
+</div>

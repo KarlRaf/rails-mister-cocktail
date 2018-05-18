@@ -9,8 +9,44 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body style="background-image: linear-gradient(to left bottom, #f2f3f6, #edeff5, #e9ebf3, #e4e8f2, #e0e4f0);">
-    <%= yield %>
+    <div class="navbar-wagon">
+      <!-- Logo -->
+      <a href="#" class="fa fa-glass-martini">
+      </a>
+      <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Profil</a>
+        <!-- Profile picture with dropdown list -->
+        <div class="navbar-wagon-item">
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+      </div>
+      <!-- Dropdown appearing on mobile only -->
+      <div class="navbar-wagon-item hidden-md hidden-lg">
+        <div class="dropdown">
+          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="body-content">
+      <%= yield %>
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fa fa-beer"></i></a>
+        <a href="#"><i class="fa fa-wine-glass"></i></a>
+        <a href="#"><i class="fa fa-glass-martini"></i></a>
+        <a href="#"><i class="fa fa-american-sign-language-interpreting"></i></a>
+        <a href="#"><i class="fa fa-thermometer"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This footer is made with <i class="fa fa-heart"></i> at Le Wagon
+      </div>
+    </div>
   </body>
 </html>

@@ -3,3 +3,9 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
+.body-content {
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
