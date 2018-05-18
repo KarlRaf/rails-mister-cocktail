@@ -12,5 +12,5 @@ url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 user_serialized = open(url).read
 cocktails = JSON.parse(user_serialized)
 cocktails["drinks"].each do |ingredient|
-  Ingredient.create(name: ingredient.values)
+  Ingredient.create(name: ingredient.values.join())
 end
