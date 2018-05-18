@@ -43,7 +43,8 @@
   <div class="row">
      <% @cocktails.each do |cocktail|  %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
         <div class="card-description">
           <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
         </div>
@@ -54,9 +55,9 @@
 </div>
 
 
-<div class="banner-2" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1507383832450-e75a770318ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a5c0d914801bfd868e7fbedd9c8d3a26&auto=format&fit=crop&w=2089&q=80');">
+<div class="banner-2">
   <div class="banner-content">
-    <h1><%= link_to "Add", new_cocktail_path, class: "btn btn-medium" %></h1>
+    <h3><%= link_to "Add a cocktail", new_cocktail_path %></h3>
   </div>
 </div>
 
@@ -65,8 +66,8 @@
     <a href="#"><i class="fa fa-beer"></i></a>
     <a href="#"><i class="fa fa-wine-glass"></i></a>
     <a href="#"><i class="fa fa-glass-martini"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-american-sign-language-interpreting"></i></a>
+    <a href="#"><i class="fa fa-thermometer"></i></a>
   </div>
   <div class="footer-copyright">
     This footer is made with <i class="fa fa-heart"></i> at Le Wagon

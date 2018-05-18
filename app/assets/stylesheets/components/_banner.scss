@@ -24,17 +24,18 @@
 .banner-2 {
   color: white;
   text-align: center;
-  height: 40vh;
+  height: 10vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.banner-2 h1 {
-  font-size: 50px;
+.banner-2 h3 {
+  font-size: 30px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  color: black;
 }
 .banner-2 p {
   font-size: 25px;
